@@ -14,6 +14,15 @@ module.exports = {
     clean: true,
     assetModuleFilename: "[name][text]",
   },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, "dist"),
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+  },
   devtool: "source-map",
   module: {
     rules: [
@@ -60,7 +69,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack App",
+      title: "BattleShip",
       filename: "index.html",
       template: "src/template.html",
     }),

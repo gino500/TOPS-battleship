@@ -8,6 +8,7 @@ describe("GameBoard", () => {
     [0, 1],
     [0, 2],
   ]);
+  console.log(board.ship);
   //--
   test("Creates 10x10 Grid", () => {
     expect(board.board).toHaveLength(100);

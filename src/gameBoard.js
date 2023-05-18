@@ -15,34 +15,33 @@ class GameBoard {
     return arr;
   }
   createShips(shipCoordinates) {
-    // get coordinates from Event
-    // **hard code for now**
     this.ship.push(new Ship(shipCoordinates));
   }
-  receiveAttack(clickedCell, shipObj = this.ship) {
+  receiveAttack(clickedCell, currCell, shipObj = this.ship) {
     let missed = true;
 
-    shipObj.forEach((objCoordinate) => {
-      objCoordinate.coordinates.forEach((shipLocation) => {
+    shipObj.forEach(objCoordinate => {
+      objCoordinate.coordinates.forEach(shipLocation => {
         if (
           shipLocation[0] === clickedCell[0] &&
           shipLocation[1] === clickedCell[1]
         ) {
+          currCell.style.background = "red";
           missed = false;
+
           return objCoordinate.hit(
             [shipLocation[0], shipLocation[1]],
-            objCoordinate
+            objCoordinate,
+            shipObj
           );
         }
       });
     });
-    if (missed) this.missedAttack(clickedCell);
+
+    if (missed) this.missedAttack(currCell);
   }
-  missedAttack(clickedCell) {
-    // to display missed attacks
-    let arr = [];
-    arr.push(clickedCell);
-    return arr;
+  missedAttack(currCell) {
+    currCell.style.background = "lightgreen";
   }
 }
 

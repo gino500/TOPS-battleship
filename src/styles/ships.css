@@ -1,0 +1,99 @@
+#ship-btn {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 0.5em;
+  border: 2px solid #3db5eb;
+  background-color: lightgray;
+}
+
+#ship-btn:hover {
+  outline: none;
+  color: #fff;
+  background-color: #3db5eb;
+  border-color: #3db5eb;
+}
+
+#ship-btn:focus {
+}
+
+.carrier {
+  width: 125px;
+  height: 10px;
+  margin: 0 0 8px 20%;
+  background-color: lightgreen;
+}
+
+.battleship {
+  width: 100px;
+  height: 10px;
+  margin: 0 0 8px 20%;
+  background-color: lightgreen;
+}
+
+.submarine,
+.destroyer {
+  width: 75px;
+  height: 10px;
+  margin: 0 0 8px 20%;
+  background-color: lightgreen;
+}
+
+.patrol {
+  width: 50px;
+  height: 10px;
+  margin: 0 0 8px 20%;
+  background-color: lightgreen;
+}
+
+/* 
+
+
+
+*/
+
+#ship-container-vertical {
+  display: flex;
+  flex-basis: 0px;
+  width: 110px;
+  margin-left: 90px;
+}
+
+#vertical:nth-child(1) {
+  width: 10px;
+  height: 125px;
+  background-color: lightgreen;
+  margin: 0 0 40px 8px;
+  position: absolute;
+}
+
+#vertical:nth-child(2) {
+  width: 10px;
+  height: 100px;
+  background-color: lightgreen;
+  margin: 0 0 40px 8px;
+}
+
+#vertical:nth-child(3) {
+  width: 10px;
+  height: 75px;
+  background-color: lightgreen;
+  margin: 0 0 40px 8px;
+}
+#vertical:nth-child(4) {
+  width: 10px;
+  height: 75px;
+  background-color: lightgreen;
+  margin: 0 0 40px 8px;
+}
+
+#vertical:nth-child(5) {
+  width: 10px;
+  height: 50px;
+  background-color: lightgreen;
+  margin: 0 0 40px 8px;
+}
+
+.draggable {
+  cursor: move;
+}

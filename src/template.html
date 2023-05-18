@@ -6,5 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Battleship</title>
   </head>
-  <body></body>
+  <body>
+    <div id="page-wrapper">
+      <div id="header">BATTLESHIP</div>
+      <div id="player-container">
+        <div id="player-text">Player</div>
+        <div id="player-board"></div>
+      </div>
+      <div id="computer-container">
+        <div id="computer-text">AI</div>
+        <div id="computer-board"></div>
+      </div>
+      <div id="ship-container">
+        <div class="carrier draggable" draggable="true"></div>
+        <div class="battleship draggable" draggable="true"></div>
+        <div class="submarine draggable" draggable="true"></div>
+        <div class="destroyer draggable" draggable="true"></div>
+        <div class="patrol draggable" draggable="true"></div>
+      </div>
+      <button id="ship-btn">Flip Ships</button>
+    </div>
+  </body>
 </html>
